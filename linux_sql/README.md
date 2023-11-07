@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 
 The purpose of this project is to help teams monitor the resource usage (memory, CPU, etc…) of different hosts on a network. The idea is that the hardware specifications of each host is recorded and stored in a table in a database and then every one minute each host reports their resource usage which is then also stored in a separate table. The collected data can then be used and analyzed by the team to make decisions regarding the network. I used postgres for the RDBMS functionality and wrote two bash scripts to collect and insert hardware information and usage data to the database. I used git extensively for version control purposes.
 
@@ -48,9 +48,9 @@ crontab -l
 
 First I created the script psql_docker.sh in order to create, start, and stop a docker container in which to run the database. I created the host_agent database. I then wrote the ddl.sql script in order create the necessary tables in the database. Then I created the scripts host_info.sh and host_usage.sh to retrieve the hardware specifications of the host and insert it into the host_info table and to to report usage data and insert it into the host_usage table respectively. Finally I used crontab to set up host_usage.sh to run automatically every minute in order report usage data periodically.
 
-# Architecture
+## Architecture
 
-# Scripts
+## Scripts
 
 ### psql_docker.sh
 The purpose of psql_docker.sh is to simplify the execution of start/stop/create commands to interface with the docker container. The following commands assume you are in the directory where the scripts directory is contained.
@@ -66,16 +66,19 @@ How to stop an already running docker container
 ```
 ./scripts/psql_docker.sh stop
 ```
+
 ### host_info.sh
 The purpose of host_info.sh is to retrieve the hardware specifications of the host and insert it into the host_info table. 
 ```
 ./scripts/host_info.sh psql_host psql_port db_name psql_user psql_password
 ```
+
 ### host_usage.sh
 The purpose of host_usage.sh is to retrieve the resource usage numbers of the host and insert it into the host_usage table
 ```
 scripts/host_usage.sh psql_host psql_port db_name psql_user psql_password
 ```
+
 ### crontab
 The purpose of crontab is to automatically run the host_usage script over and over again every minute so that every minute the host_usage table will be updated with resource usage information.
 
@@ -97,3 +100,10 @@ The purpose of this script is to create the necessary tables host_info and host_
 ```
 psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
 ```
+
+## Database Modeling 
+We have two tables. host_info and host_usage
+
+host_info: There are 9 columns in the table, id, host_name, cpu_number, cpu_architecture, cpu_model, cpu_mhz, l2_cache, "timestamp", total_mem. The datatypes of these columns are SERIAL, VARCHAR, INT2, VARCHAR, VARCHAR, FLOAT8, INT4, TIMESTAMP, and INT4 respectively. The id column is the primary key and hostname is set to UNIQUE. Every column except "timestamp" and total_mem is set to NOT NULL.
+
+host_usage: There are 7 columns in the table, "timestamp", host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available. The datatypes of these columns are TIMESTAMP, SERIAL, INT4, INT2, INT2, INT4, and INT4 respectively. host_id is a foreign key and references the id column of the host_info table. Every single column is set to NOT NULL.
