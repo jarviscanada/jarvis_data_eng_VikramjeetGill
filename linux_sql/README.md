@@ -107,3 +107,10 @@ We have two tables. host_info and host_usage
 host_info: There are 9 columns in the table, id, host_name, cpu_number, cpu_architecture, cpu_model, cpu_mhz, l2_cache, "timestamp", total_mem. The datatypes of these columns are SERIAL, VARCHAR, INT2, VARCHAR, VARCHAR, FLOAT8, INT4, TIMESTAMP, and INT4 respectively. The id column is the primary key and hostname is set to UNIQUE. Every column except "timestamp" and total_mem is set to NOT NULL.
 
 host_usage: There are 7 columns in the table, "timestamp", host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available. The datatypes of these columns are TIMESTAMP, SERIAL, INT4, INT2, INT2, INT4, and INT4 respectively. host_id is a foreign key and references the id column of the host_info table. Every single column is set to NOT NULL.
+
+# Test
+In order to test the bash scripts DDL I ran both host_info.sh and host_usage.sh and then I ran two postgres queries to check to see if the tables host_info and host_usage were updated. These queries were SELECT * FROM host_usage; and SELECT * FROM host_info;
+
+# Deployment
+I created a docker container in which to run the postgres instance which stores the database that contains the host_info and host_usage tables. Then I ran host_info to add the host specifications to the host_info table. Finally I set up the crontab is such a way to automatically run the host_usage script once every minute to automatically store resource usage data. All the code is stored in the git repositories.
+
