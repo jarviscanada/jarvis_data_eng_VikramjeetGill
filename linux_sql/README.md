@@ -1,6 +1,6 @@
 # Introduction
 
-The purpose of this project is to help teams monitor the resource usage (memory, CPU, etc…) of different hosts on a network. The idea is that the hardware specifications of each host are recorded and stored in a table in a database and then every minute each host reports their resource usage which is then also stored in a separate table. The collected data can then be used and analyzed by the team to make decisions regarding the network. I used postgres for the RDBMS functionality and wrote two bash scripts to collect and insert hardware information and usage data into the database. I used git extensively for version control purposes.
+The purpose of this project is to help teams monitor the resource usage (memory, CPU, etc…) of different hosts on a network. The idea is that the hardware specifications of each host are recorded and stored in a table in a database and then every minute each host reports their resource usage which is then also stored in a separate table. The collected data can then be used and analyzed by the team to make decisions regarding the network. I used Postgres for the RDBMS functionality and wrote two bash scripts to collect and insert hardware information and usage data into the database. I used git extensively for version control purposes.
 
 # Quick Start
 
@@ -112,7 +112,7 @@ host_usage: There are 7 columns in the table, "timestamp", host_id, memory_free,
 In order to test the bash scripts DDL I ran both host_info.sh and host_usage.sh and then I ran two postgres queries to check to see if the tables host_info and host_usage were updated. These queries were SELECT * FROM host_usage; and SELECT * FROM host_info;
 
 # Deployment
-I created a docker container in which to run the postgres instance which stores the database that contains the host_info and host_usage tables. Then I ran host_info to add the host specifications to the host_info table. Finally, I set up the crontab is such a way to automatically run the host_usage script once every minute to automatically store resource usage data. All the code is stored in the GitHub repository. 
+I created a docker container in which to run the Postgres instance which stores the database that contains the host_info and host_usage tables. Then I ran host_info to add the host specifications to the host_info table. Finally, I set up the crontab is such a way to automatically run the host_usage script once every minute to automatically store resource usage data. All the code is stored in the GitHub repository. 
 
 # Improvements
 1. I would like to implement a script to analyze resource usage automatically and rank hosts based on the usage of resources.
