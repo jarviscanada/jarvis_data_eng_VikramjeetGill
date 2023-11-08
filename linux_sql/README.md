@@ -1,6 +1,6 @@
 # Introduction
 
-The purpose of this project is to help teams monitor the resource usage (memory, CPU, etc…) of different hosts on a network. The idea is that the hardware specifications of each host is recorded and stored in a table in a database and then every one minute each host reports their resource usage which is then also stored in a separate table. The collected data can then be used and analyzed by the team to make decisions regarding the network. I used postgres for the RDBMS functionality and wrote two bash scripts to collect and insert hardware information and usage data to the database. I used git extensively for version control purposes.
+The purpose of this project is to help teams monitor the resource usage (memory, CPU, etc…) of different hosts on a network. The idea is that the hardware specifications of each host are recorded and stored in a table in a database and then every minute each host reports their resource usage which is then also stored in a separate table. The collected data can then be used and analyzed by the team to make decisions regarding the network. I used postgres for the RDBMS functionality and wrote two bash scripts to collect and insert hardware information and usage data into the database. I used git extensively for version control purposes.
 
 # Quick Start
 
@@ -39,14 +39,14 @@ Crontab setup
 ```
 crontab -e
 
-bash /home/centos/dev/jrvs/bootcamp/linux_sql/host_agent/scripts/host_usage.sh localhost 5432 host_agent postgres password > /tmp/host_usage.log
+bash [FULL PATHNAME]/host_usage.sh localhost 5432 host_agent postgres password > /tmp/host_usage.log
 
 crontab -l
 ```
 
 # Implementation
 
-First I created the script psql_docker.sh in order to create, start, and stop a docker container in which to run the database. I created the host_agent database. I then wrote the ddl.sql script in order create the necessary tables in the database. Then I created the scripts host_info.sh and host_usage.sh to retrieve the hardware specifications of the host and insert it into the host_info table and to to report usage data and insert it into the host_usage table respectively. Finally I used crontab to set up host_usage.sh to run automatically every minute in order report usage data periodically.
+First I created the script psql_docker.sh to create, start, and stop a docker container in which to run the database. I created the host_agent database. I then wrote the ddl.sql script in order to create the necessary tables in the database. Then I created the scripts host_info.sh and host_usage.sh to retrieve the hardware specifications of the host and insert them into the host_info table and to report usage data and insert it into the host_usage table respectively. Finally, I used crontab to set up host_usage.sh to run automatically every minute to report usage data periodically.
 
 ## Architecture
 
@@ -104,17 +104,17 @@ psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
 ## Database Modeling 
 We have two tables. host_info and host_usage
 
-host_info: There are 9 columns in the table, id, host_name, cpu_number, cpu_architecture, cpu_model, cpu_mhz, l2_cache, "timestamp", total_mem. The datatypes of these columns are SERIAL, VARCHAR, INT2, VARCHAR, VARCHAR, FLOAT8, INT4, TIMESTAMP, and INT4 respectively. The id column is the primary key and hostname is set to UNIQUE. Every column except "timestamp" and total_mem is set to NOT NULL.
+host_info: There are 9 columns in the table, id, host_name, cpu_number, cpu_architecture, cpu_model, cpu_mhz, l2_cache, "timestamp", total_mem. The data types of these columns are SERIAL, VARCHAR, INT2, VARCHAR, VARCHAR, FLOAT8, INT4, TIMESTAMP, and INT4 respectively. The id column is the primary key and hostname is set to UNIQUE. Every column except "timestamp" and total_mem is set to NOT NULL.
 
-host_usage: There are 7 columns in the table, "timestamp", host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available. The datatypes of these columns are TIMESTAMP, SERIAL, INT4, INT2, INT2, INT4, and INT4 respectively. host_id is a foreign key and references the id column of the host_info table. Every single column is set to NOT NULL.
+host_usage: There are 7 columns in the table, "timestamp", host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available. The data types of these columns are TIMESTAMP, SERIAL, INT4, INT2, INT2, INT4, and INT4 respectively. host_id is a foreign key and references the id column of the host_info table. Every single column is set to NOT NULL.
 
 # Test
 In order to test the bash scripts DDL I ran both host_info.sh and host_usage.sh and then I ran two postgres queries to check to see if the tables host_info and host_usage were updated. These queries were SELECT * FROM host_usage; and SELECT * FROM host_info;
 
 # Deployment
-I created a docker container in which to run the postgres instance which stores the database that contains the host_info and host_usage tables. Then I ran host_info to add the host specifications to the host_info table. Finally I set up the crontab is such a way to automatically run the host_usage script once every minute to automatically store resource usage data. All the code is stored in the git repositories.
+I created a docker container in which to run the postgres instance which stores the database that contains the host_info and host_usage tables. Then I ran host_info to add the host specifications to the host_info table. Finally, I set up the crontab is such a way to automatically run the host_usage script once every minute to automatically store resource usage data. All the code is stored in the GitHub repository. 
 
 # Improvements
-1. I would like to implement a script to analyze the resource usage automatically and rank hosts based on usage of resources.
+1. I would like to implement a script to analyze resource usage automatically and rank hosts based on the usage of resources.
 2. I would like to implement a way to issue alerts when resource usage amounts get dangerously high.
 3. I would like to implement a way to rerun the host_info script when hardware specs change in order to keep the usage data accurate.
