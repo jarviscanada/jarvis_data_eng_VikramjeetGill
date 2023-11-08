@@ -114,3 +114,7 @@ In order to test the bash scripts DDL I ran both host_info.sh and host_usage.sh 
 # Deployment
 I created a docker container in which to run the postgres instance which stores the database that contains the host_info and host_usage tables. Then I ran host_info to add the host specifications to the host_info table. Finally I set up the crontab is such a way to automatically run the host_usage script once every minute to automatically store resource usage data. All the code is stored in the git repositories.
 
+# Improvements
+1. I would like to implement a script to analyze the resource usage automatically and rank hosts based on usage of resources.
+2. I would like to implement a way to issue alerts when resource usage amounts get dangerously high.
+3. I would like to implement a way to rerun the host_info script when hardware specs change in order to keep the usage data accurate.
