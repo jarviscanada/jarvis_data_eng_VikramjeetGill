@@ -50,6 +50,8 @@ First I created the script psql_docker.sh to create, start, and stop a docker co
 
 ## Architecture
 
+![Architecture Diagram](assets/Linux_project_diagram.drawio.png)
+
 ## Scripts
 
 ### psql_docker.sh
