@@ -1,0 +1,112 @@
+# Preferred name (Characters only)
+name: "Vikramjeet Gill"
+# Your GitHub repo root URL
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_VikramjeetGill
+
+# Introduce yourself, your academic and professional background.
+# What excites you about the software industry and your passion. At least 80 words
+summary: My name is Vikramjeet Gill. I am a recent graduate of York University and I have a bachelor's degree in Computer Science. I am a software developer here at Jarvis. Before working at Jarvis I worked for a nonprofit called Software For Love mostly doing front-end work designing websites for clients including charities. Before that, I was working as a student success mentor lead at York where I was responsible for managing our Peer Helper program and leading a team of over 30 people. What excites me most about the software development industry is the opportunity to work on a wide variety of projects in many industries. Businesses in every sector of the economy require software developers so as a developer you have the option of working for whatever sector you want ranging from banking to big tech to gaming to aerospace to E-commerce and more.
+
+# Group your skills by level.
+# Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
+skills:
+  # At least 5 skills
+  proficient:
+    - Java
+    - Linux/Bash
+    - RDBMS/SQL
+    - Agile/Scrum
+    - Git
+  # At least 5 skills
+  competent:
+    - Python
+    - React
+    - NodeJS
+    - Bootstrap
+    - Javascript
+  # At least 5 skills
+  familiar:
+    - Angular
+    - Typescript
+    - C++
+    - AWS
+    - c
+
+# List of Jarvis projects
+jarvis_projects:
+  - name: "Cluster Monitor"
+    git_url: "/linux_sql"
+    # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description:
+      - "Developed a series of bash scripts designed to capture host hardware specification data and host hardware resource usage data and update and report said usage data on a minute by minute basis."
+      - "host_info.sh captures host hardware specification data and host_usage.sh captures resource usage data. psql_docker.sh is used to interact with and manage the required docker container"
+      - "Used PostgreSQL for database management and to store collected information."
+  - name: "Core Java Apps"
+    git_url: "/core_java"
+    description: ""
+  - name: "Springboot App"
+    git_url: "/springboot"
+    description: ""
+  - name: "Python Data Analytics"
+    git_url: "/python_data_anlytics"
+    description: ""
+  - name: "Hadoop"
+    git_url: "/hadoop"
+    description: ""
+  - name: "Spark"
+    git_url: "/spark"
+    description: ""
+  - name: "Cloud/DevOps"
+    git_url: "/cloud_devops"
+    description: ""
+
+# List of personal or academic projects
+# Feel free to add more projects
+highlighted_projects:
+    #project name
+  - name: "Unova Pokedex"
+    #URL is optional
+    git_url: "https://github.com/Vikramjeet-Gill/Unova_Pokedex"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Created interactive web app that serves as an encyclopedia for the 5th generation of Pokémon to develop HTML, CSS, JavaScript, and other web development skills. Used React and Bootstrap frameworks for frontend to develop the user interface."
+
+#List of professional experience
+#The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+#The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
+professional_experience:
+  #Write your Jarvis role as a professional experience rather than training.
+  - title: "Software Developer"
+    company: "Jarvis"
+    duration: "November 2023 - present"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Built various software projects both for internal use and for clients."
+  - title: "Software Developer"
+    company: "Software For Love"
+    duration: "May 2023 - September 2023"
+    description: "Utilized React and other front-end frameworks to develop user interfaces for client websites. Applied UI and UX design principles to develop client websites."
+
+#List of edcuation
+education: 
+  - school_name: "York University"
+    duration: "2018-2023"
+    degree: "Honours Bachelor of Science"
+    department: "Lassonde School of Engineering"
+    # optional
+    awards_achievements: 
+
+#Optional section
+others:
+  #category
+  - title: "Certificates"
+      #list of items
+    bullets:
+      - "Udacity Machine Learning (2019)"
+  - title: "Awards"
+    bullets:
+    - "Winner"
+  - title: "Activities/Hobbies"
+    bullets:
+    - "Basketball player"
+    - "Competitive gaming"
+    - "Volunteer, ABC Food bank: Ut enim ad minim veniam"

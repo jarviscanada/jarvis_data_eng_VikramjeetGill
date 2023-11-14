@@ -1,0 +1,121 @@
+{
+  "education": [
+    {
+      "awards_achievements": null,
+      "degree": "Honours Bachelor of Science",
+      "department": "Lassonde School of Engineering",
+      "duration": "2018-2023",
+      "school_name": "York University"
+    }
+  ],
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_VikramjeetGill",
+  "highlighted_projects": [
+    {
+      "description": "Created interactive web app that serves as an encyclopedia for the 5th generation of Pokémon to develop HTML, CSS, JavaScript, and other web development skills. Used React and Bootstrap frameworks for frontend to develop the user interface.",
+      "git_url": "https://github.com/Vikramjeet-Gill/Unova_Pokedex",
+      "name": "Unova Pokedex"
+    }
+  ],
+  "jarvis_projects": [
+    {
+      "description": [
+        "Developed a series of bash scripts designed to capture host hardware specification data and host hardware resource usage data and update and report said usage data on a minute by minute basis.",
+        "host_info.sh captures host hardware specification data and host_usage.sh captures resource usage data. psql_docker.sh is used to interact with and manage the required docker container",
+        "Used PostgreSQL for database management and to store collected information."
+      ],
+      "git_url": "/linux_sql",
+      "name": "Cluster Monitor"
+    },
+    {
+      "description": "",
+      "git_url": "/core_java",
+      "name": "Core Java Apps"
+    },
+    {
+      "description": "",
+      "git_url": "/springboot",
+      "name": "Springboot App"
+    },
+    {
+      "description": "",
+      "git_url": "/python_data_anlytics",
+      "name": "Python Data Analytics"
+    },
+    {
+      "description": "",
+      "git_url": "/hadoop",
+      "name": "Hadoop"
+    },
+    {
+      "description": "",
+      "git_url": "/spark",
+      "name": "Spark"
+    },
+    {
+      "description": "",
+      "git_url": "/cloud_devops",
+      "name": "Cloud/DevOps"
+    }
+  ],
+  "name": "Vikramjeet Gill",
+  "others": [
+    {
+      "bullets": [
+        "Udacity Machine Learning (2019)"
+      ],
+      "title": "Certificates"
+    },
+    {
+      "bullets": [
+        "Winner"
+      ],
+      "title": "Awards"
+    },
+    {
+      "bullets": [
+        "Basketball player",
+        "Competitive gaming",
+        "Volunteer, ABC Food bank: Ut enim ad minim veniam"
+      ],
+      "title": "Activities/Hobbies"
+    }
+  ],
+  "professional_experience": [
+    {
+      "company": "Jarvis",
+      "description": "Built various software projects both for internal use and for clients.",
+      "duration": "November 2023 - present",
+      "title": "Software Developer"
+    },
+    {
+      "company": "Software For Love",
+      "description": "Utilized React and other front-end frameworks to develop user interfaces for client websites. Applied UI and UX design principles to develop client websites.",
+      "duration": "May 2023 - September 2023",
+      "title": "Software Developer"
+    }
+  ],
+  "skills": {
+    "competent": [
+      "Python",
+      "React",
+      "NodeJS",
+      "Bootstrap",
+      "Javascript"
+    ],
+    "familiar": [
+      "Angular",
+      "Typescript",
+      "C++",
+      "AWS",
+      "c"
+    ],
+    "proficient": [
+      "Java",
+      "Linux/Bash",
+      "RDBMS/SQL",
+      "Agile/Scrum",
+      "Git"
+    ]
+  },
+  "summary": "My name is Vikramjeet Gill. I am a recent graduate of York University and I have a bachelor's degree in Computer Science. I am a software developer here at Jarvis. Before working at Jarvis I worked for a nonprofit called Software For Love mostly doing front-end work designing websites for clients including charities. Before that, I was working as a student success mentor lead at York where I was responsible for managing our Peer Helper program and leading a team of over 30 people. What excites me most about the software development industry is the opportunity to work on a wide variety of projects in many industries. Businesses in every sector of the economy require software developers so as a developer you have the option of working for whatever sector you want ranging from banking to big tech to gaming to aerospace to E-commerce and more."
+}
