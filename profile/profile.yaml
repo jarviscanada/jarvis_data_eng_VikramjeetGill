@@ -80,11 +80,11 @@ professional_experience:
     company: "Jarvis"
     duration: "November 2023 - present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Built various software projects both for internal use and for clients."
+    description: "Built various software projects both for internal use and for clients. Applied the Agile framework implementation Scrum to coordinate with team members to produce software."
   - title: "Software Developer"
     company: "Software For Love"
     duration: "May 2023 - September 2023"
-    description: "Utilized React and other front-end frameworks to develop user interfaces for client websites. Applied UI and UX design principles to develop client websites."
+    description: "Utilized React and other front-end frameworks to develop user interfaces for client websites. Applied UI and UX design principles to design client websites."
 
 #List of edcuation
 education: 

@@ -83,13 +83,13 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Built various software projects both for internal use and for clients.",
+      "description": "Built various software projects both for internal use and for clients. Applied the Agile framework implementation Scrum to coordinate with team members to produce software.",
       "duration": "November 2023 - present",
       "title": "Software Developer"
     },
     {
       "company": "Software For Love",
-      "description": "Utilized React and other front-end frameworks to develop user interfaces for client websites. Applied UI and UX design principles to develop client websites.",
+      "description": "Utilized React and other front-end frameworks to develop user interfaces for client websites. Applied UI and UX design principles to design client websites.",
       "duration": "May 2023 - September 2023",
       "title": "Software Developer"
     }
