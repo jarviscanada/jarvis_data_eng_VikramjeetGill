@@ -92,7 +92,7 @@ professional_experience:
 education: 
   - school_name: "York University"
     duration: "2018-2023"
-    degree: "Honours Bachelor of Science, major: Computer Science"
+    degree: "Honours Bachelor of Science, in Computer Science"
     department: "Lassonde School of Engineering"
     # optional
     awards_achievements: 
