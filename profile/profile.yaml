@@ -30,7 +30,7 @@ skills:
     - Typescript
     - C++
     - AWS
-    - c
+    - C
 
 # List of Jarvis projects
 jarvis_projects:
@@ -42,24 +42,24 @@ jarvis_projects:
       - "Developed a series of bash scripts designed to capture host hardware specification data and host hardware resource usage data and update and report said usage data on a minute by minute basis."
       - "host_info.sh captures host hardware specification data and host_usage.sh captures resource usage data. psql_docker.sh is used to interact with and manage the required docker container"
       - "Used PostgreSQL for database management and to store collected information."
-  - name: "Core Java Apps"
-    git_url: "/core_java"
-    description: ""
-  - name: "Springboot App"
-    git_url: "/springboot"
-    description: ""
-  - name: "Python Data Analytics"
-    git_url: "/python_data_anlytics"
-    description: ""
-  - name: "Hadoop"
-    git_url: "/hadoop"
-    description: ""
-  - name: "Spark"
-    git_url: "/spark"
-    description: ""
-  - name: "Cloud/DevOps"
-    git_url: "/cloud_devops"
-    description: ""
+ # - name: "Core Java Apps"
+    #   git_url: "/core_java"
+    #description: ""
+    #- name: "Springboot App"
+    #git_url: "/springboot"
+    #description: ""
+    #- name: "Python Data Analytics"
+    #git_url: "/python_data_anlytics"
+    #description: ""
+    #- name: "Hadoop"
+    #git_url: "/hadoop"
+    #description: ""
+    # - name: "Spark"
+    #git_url: "/spark"
+    #description: ""
+    #- name: "Cloud/DevOps"
+    # git_url: "/cloud_devops"
+  # description: ""
 
 # List of personal or academic projects
 # Feel free to add more projects
@@ -70,7 +70,6 @@ highlighted_projects:
     git_url: "https://github.com/Vikramjeet-Gill/Unova_Pokedex"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: "Created interactive web app that serves as an encyclopedia for the 5th generation of Pokémon to develop HTML, CSS, JavaScript, and other web development skills. Used React and Bootstrap frameworks for frontend to develop the user interface."
-
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
 #The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
@@ -80,12 +79,15 @@ professional_experience:
     company: "Jarvis"
     duration: "November 2023 - present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Built various software projects both for internal use and for clients. Applied the Agile framework implementation Scrum to coordinate with team members to produce software."
+    description: "Built multiple applications both for internal use and for clients. Applied the Agile framework implementation Scrum to coordinate with team members to produce software. Utilized PostGreSQL to design database for internal applications."
   - title: "Software Developer"
     company: "Software For Love"
     duration: "May 2023 - September 2023"
-    description: "Utilized React and other front-end frameworks to develop user interfaces for client websites. Applied UI and UX design principles to design client websites."
-
+    description: "Utilized React, Bootstrap, and other front-end frameworks to develop user interfaces for client websites. Applied UI and UX design principles to design client websites. Worked with a team of over a dozen other developers and designers to develop software solutions for clients."
+  - title: "Student Success Mentor Lead"
+    company: "York University"
+    duration: "September 2022 - April 2023"
+    description: "Managed a team of over 30 employees and volunteers to provide academic advising and student support services to computer science and engineering students. Planned and lead academic orientation events for over 400 first year computer science, digital media, and engineering students. Organized learning skills workshops, Leetcode practice sessions, and faculty panels. Wrote Python scripts to analyze student related data."
 #List of edcuation
 education: 
   - school_name: "York University"
