@@ -14,6 +14,10 @@
       "description": "Created interactive web app that serves as an encyclopedia for the 5th generation of Pokémon to develop HTML, CSS, JavaScript, and other web development skills. Used React and Bootstrap frameworks for frontend to develop the user interface.",
       "git_url": "https://github.com/Vikramjeet-Gill/Unova_Pokedex",
       "name": "Unova Pokedex"
+    },
+    {
+      "description": "Created a web store as a full stack development exercise. Primarily used Java, Angular, and TypeScript. Created a database using SQL. Used AWS for hosting. Store functionality included account creation, a functioning cart and checkout system etc...",
+      "name": "Furniture Store E-Commerce Platform"
     }
   ],
   "jarvis_projects": [
@@ -31,8 +35,9 @@
   "others": [
     {
       "bullets": [
-        "Marathon Runner",
-        "Powerlifter"
+        "Marathon Runner (cardiovascular health is very important to me and running a marathon is a stepping stone to more impressive athletic feats like the Spartan Race or a triathlon which I hope to do one day)",
+        "Powerlifter (Building strength and muscle is very important to me since they are useful for pretty much all athletic pursuits and for remaining healthy)",
+        "Reading (I have always been an avid fan of science fiction and fantasy books such as The Expanse series and ASOIAF series and so I make an effort to always be reading at least one book a month)"
       ],
       "title": "Activities/Hobbies"
     }
@@ -80,5 +85,5 @@
       "Git"
     ]
   },
-  "summary": "My name is Vikramjeet Gill. I am a recent graduate of York University and I have a bachelor's degree in Computer Science. I am a software developer here at Jarvis. Before working at Jarvis I worked for a nonprofit called Software For Love mostly doing front-end work designing websites for clients including charities. Before that, I was working as a student success mentor lead at York where I was responsible for managing our Peer Helper program and leading a team of over 30 people. What excites me most about the software development industry is the opportunity to work on a wide variety of projects in many industries. Businesses in every sector of the economy require software developers so as a developer you have the option of working for whatever sector you want ranging from banking to big tech to gaming to aerospace to E-commerce and more."
+  "summary": "My name is Vikramjeet Gill. I am a recent graduate of York University and I have a bachelor's degree in Computer Science. I am a software developer here at Jarvis and during this role I have honed several key technical skills by working on projects both for internal use and client projects. In this role I have used Java, PostgreSQL, bash scripting, and various other technologies. Before working at Jarvis I worked for a nonprofit called Software For Love mostly doing front-end work designing websites for clients including charities where I applied my knowledge of front-end technologies and frameworks like React and Bootstrap to build the user interfaces of the client websites. Before that, I was working as a student success mentor lead at York where I was responsible for managing our Peer Helper program and leading a team of over 30 people. What excites me the most about the software development industry is the opportunity to work on software solutions that will have a direct positive impact on people's lives. Software solutions have been at the forefront of revolutionizing finance, transportation, healthcare, and many other sectors and so as a software developer you can be assured that your work is having an impact and changing people's lives for the better."
 }
