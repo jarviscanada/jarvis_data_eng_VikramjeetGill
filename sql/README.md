@@ -1,5 +1,7 @@
 # Introduction
 
+	The purpose of this project was to hone my RDBMS skills by building a database for a club by creating three tables called members bookings and facilities and running queries on them. The only user of this project is myself as it is purely for practice. I used a PostgreSQL instance running inside a docker container to host the database. I used git for version control. I used a file called clubdata.sql to create the schema, database, and tables and to populate the tables with entries. 
+
 #SQL Queries
 
 ###### Table Setup (DDL)
