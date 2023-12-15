@@ -6,11 +6,17 @@ import org.apache.log4j.BasicConfigurator;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
-public class JavaGrepImp implements JavaGrep {
+public class JavaGrepImp implements JavaGrep, LambdaStreamExc {
 
-    final Logger logger = LoggerFactory.getLogger(JavaGrep.class);
+    static final Logger logger = LoggerFactory.getLogger(JavaGrep.class);
     private String regex;
     private String rootPath;
     private String outFile;
@@ -45,6 +51,72 @@ public class JavaGrepImp implements JavaGrep {
         this.outFile = outFile;
     }
 
+    @Override
+    public Stream<String> createStrStream(String... strings) {
+        return Arrays.stream(strings);
+    }
+
+    @Override
+    public Stream<String> toUpperCase(String... strings) {
+        return createStrStream(strings).map(String::toUpperCase);
+    }
+
+    @Override
+    public Stream<String> filter(Stream<String> stringStream, String pattern) {
+        return stringStream.filter(s -> !s.contains(pattern));
+    }
+
+    @Override
+    public IntStream createIntStream(int[] arr) {
+        return Arrays.stream(arr);
+    }
+
+    @Override
+    public <E> List<E> toList(Stream<E> stream) {
+        return stream.collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Integer> toList(IntStream intStream) {
+        return intStream.boxed().collect(Collectors.toList());
+    }
+
+    @Override
+    public IntStream createIntStream(int start, int end) {
+        return IntStream.rangeClosed(start, end);
+    }
+
+    @Override
+    public DoubleStream squareRootIntStream(IntStream intStream) {
+        return intStream.mapToDouble(Math::sqrt);
+    }
+
+    @Override
+    public IntStream getOdd(IntStream intStream) {
+        return intStream.filter(n -> n % 2 != 0);
+    }
+
+    @Override
+    public Consumer<String> getLambdaPrinter(String prefix, String suffix) {
+        return message -> System.out.println(prefix + message + suffix);
+    }
+
+    @Override
+    public void printMessages(String[] messages, Consumer<String> printer) {
+        Arrays.stream(messages).forEach(printer);
+    }
+
+    @Override
+    public void printOdd(IntStream intStream, Consumer<String> printer) {
+        getOdd(intStream).mapToObj(String::valueOf).forEach(printer);
+    }
+
+    @Override
+    public Stream<Integer> flatNestedInt(Stream<List<Integer>> ints) {
+        // Using flatMap
+        return ints.flatMap(List::stream);
+    }
+
     public static void main(String[] args) {
         if(args.length != 3) {
             throw new IllegalArgumentException("Usage: JavaGrep regex rootPath outFile");
@@ -61,7 +133,9 @@ public class JavaGrepImp implements JavaGrep {
         try {
             javaGrepImp.process();
         }catch (Exception ex) {
-            javaGrepImp.logger.error("Error: Unable to process", ex);
+            // I had to remove the javaGrepImp. part of the logger statement since
+            // I changed it to be static to solve a problem in JavaGrepLambdaImp
+            logger.error("Error: Unable to process", ex);
         }
     }
 
