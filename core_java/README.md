@@ -16,7 +16,7 @@ The app can be ran using three difference methods.
 
     2. Downloading and running the docker image
 
-    You can pull the docker image from dockerhub using dockerpull vgill16/grep. You then run the following line while substituting in the appropriate arguments.
+    You can pull the docker image from dockerhub using the command dockerpull vgill16/grep and then run the following line while substituting in the appropriate arguments.
 
     docker run --rm \ -v `pwd`/data:/data -v `pwd`/log:/log \ vgill16/grep "regex pattern" "source directory" "outfile" 
 
@@ -39,6 +39,10 @@ The original design of the application (that doesn't use Streams) runs into memo
 I first tested the application by using the IDE and manually inputting the arguements to insure proper output. After that I performed both of the methods listed under the quickstart section to make sure that those methods yeilded the same results. During the testing process I used logger to handle errors.
 
 #Deployment
+To deploy the app I turned the app into a docker image and uploaded it to my dockerhub account. To run the application follow the instructions under the Quick Start section.
+
+#Improvement
+One improvement I can make is to optimize memory usage by changing the methods listFiles and readLines to return Streams instead of lists.
 
 3. [JDBC App](./jdbc)
 4. [Twitter CRUD App](./twitter)
