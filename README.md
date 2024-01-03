@@ -21,6 +21,12 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_Vikramjeet
   - host_info.sh captures host hardware specification data and host_usage.sh captures resource usage data. psql_docker.sh is used to interact with and manage the required docker container
   - Used PostgreSQL for database management and to store collected information.
 
+**Java Grep** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_VikramjeetGill/tree/master/core_java/grep)]:
+      
+  - Developed a Java application that mimics the functionality of the grep command
+  - The app works by recursively building a list of files in the provided source directory and all subdirectories and then reading the lines from those files and adding matching lines to the output file.
+  - Used Maven for dependency management. Used Docker for deployment.
+
 
 ## Highlighted Projects
 **Unova Pokedex** [[GitHub](https://github.com/Vikramjeet-Gill/Unova_Pokedex)]: Created interactive web app that serves as an encyclopedia for the 5th generation of Pokémon to develop HTML, CSS, JavaScript, and other web development skills. Used React and Bootstrap frameworks for frontend to develop the user interface.
