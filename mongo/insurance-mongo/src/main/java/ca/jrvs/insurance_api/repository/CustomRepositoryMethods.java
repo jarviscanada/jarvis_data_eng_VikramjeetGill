@@ -15,6 +15,6 @@ public interface CustomRepositoryMethods {
     void update(List<Person> persons);
     double getAverageAge();
     int getMaxCars();
-    void deleteAll(); // No idea why this is saying no usages?
+    void deleteAll();
 
 }
