@@ -38,6 +38,15 @@
       ],
       "git_url": "/core_java/grep",
       "name": "Java Grep"
+    },
+    {
+      "description": [
+        "Created an API with Spring to manage and access the customer data of an insurance agency. Functionality includes adding customers, finding customers by ID, deleting customers, updating existing an customer's data, and more.",
+        "Used Spring MVC framework for application development. Used Spring Data for automatic implementation of basic CRUD methods and provided custom implementations for more complex methods.",
+        "Used Maven for dependency management. Used MongoDB for database management. Used Postman for application testing."
+      ],
+      "git_url": "/mongo",
+      "name": "Insurance API"
     }
   ],
   "name": "Vikramjeet Gill",
